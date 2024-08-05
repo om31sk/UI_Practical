@@ -1,0 +1,18 @@
+div
+{
+  background-color:hsl(117,86%,50%);
+}
+h1
+{
+    background-color: #ffa17f;
+    color: black;
+}
+img 
+{
+   height: 80px;
+   width: 90px;
+}
+p
+{
+    background-color:hsl(136,47%,58%);
+}    

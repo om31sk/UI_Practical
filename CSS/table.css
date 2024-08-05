@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 80%;
+    min-height: 300px;
+    margin: auto;
+    
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+table{
+    box-shadow: 5px  10px 10px 5px gray;
+}
+
+table,tr,th,td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+   
+}
+
+table tr:hover{
+    background-color: rgb(167, 167, 244);
+    color: white;
+
+}
+
+table img{
+    width: 80px;
+    height: 80px;
+}
+
+table input[type=button]
+{
+    padding: 5px;
+    background-color: red;
+}
+
+span input[type=button]
+{
+    background-color:rgb(115, 115, 244);
+    
+}

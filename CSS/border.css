@@ -1,0 +1,48 @@
+div
+{
+    border: solid 7px chocolate;
+    margin: 30px;
+    background-color: aqua;
+}
+h1
+{
+    border: dotted 8px;
+    border-color: chartreuse;
+    width: fit-content;
+    background-color: aliceblue;
+
+}
+#div1
+{
+  border: double 10px blueviolet;
+  width: fit-content;
+  padding:50px;
+  background-color: darkkhaki;
+
+}
+.div2
+{
+    border: dashed 10px yellow;
+    width: fit-content;
+    padding: 50px;
+    background-color: indianred;
+}
+p
+{
+    border: groove 10px black;
+    width: fit-content;
+    padding: 50px;
+    background-color: chartreuse;
+}
+img
+{
+    float: right;
+    width: 500px;
+    height: 500px;
+    padding-right: 70px;
+}
+#img1
+{
+    float: right;
+    padding-right: 60px;
+}

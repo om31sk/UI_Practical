@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box
+        {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,52,0.3));
+            position: relative;
+            padding: 0.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav
+        {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo
+        {
+            color: #fff;
+        }
+        nav ol li
+        {
+            list-style-type:none;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        nav ol li a
+        {
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+        }
+        .content
+        {
+                                  
+            text-align: center;
+            position: absolute;
+        }
+        .content h1
+        {
+            font-size: 100px;
+            color: #fff;
+            font-weight: 600;
+
+        }
+        .content h1:hover
+        {
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #fff;
+            -webkit-text-fill-color: transparent;
+        }
+        .content a
+        {
+            text-decoration: none;
+            font-size: 24px;
+            display: inline-block;
+            padding: 14px 70px;
+            margin-top: 20px;
+            border: 2px solid  rgb(153,148,90);
+            border-radius: 50px;
+            color: #fff;
+        }
+        .content a:hover
+        {
+            background-color: rgb(29, 90, 45);
+            color: #fff;
+        }
+        .back-video
+        {
+        
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <video src="/Video/20600514-uhd_3840_2160_30fps.mp4" 
+        autoplay
+        muted 
+        loop
+        type="video.mp4"
+        class="back-video">
+        </video>
+     <nav>
+       
+        <div class="logo">
+           <h1>Company Name</h1>
+        </div>
+        <ol>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Jobs</a></li>
+            <li><a href="">Contacts</a></li>
+        </ol>
+    </nav>
+      
+    <div class="content">
+        <h1>Welcome To Amazon</h1>
+        <a href="#">Read More</a>
+    </div>
+
+     </div>   
+</body>
+</html>

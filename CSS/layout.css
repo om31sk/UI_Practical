@@ -1,0 +1,39 @@
+.div1
+{ 
+  background-color: aqua;
+  border: 2px solid red;
+}
+.div1 h1
+{
+    background-color: chocolate;
+}
+.div1 p
+{
+    background-color: chartreuse;
+}
+.div2
+{ 
+   background-color: yellow;
+   border: 2px solid red;
+}
+.div2 h1
+{
+    background-color: rgb(226, 222, 241);
+}
+.div2 p
+{
+    background-color: rgb(149, 198, 228);
+}
+.div3
+{ 
+   background-color:palevioletred;
+   border: 2px solid red;
+}
+.div3 h1
+{
+    background-color:rgb(3, 107, 62) ;
+}
+.div3 p
+{
+    background-color: rgb(3, 93, 111);
+}

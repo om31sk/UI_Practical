@@ -1,0 +1,132 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
+ 
+.maindiv
+{
+    width: 100%;
+    min-height: 40px;
+    border: 3px solid #000;
+    margin: auto;
+}
+.header
+{
+    width: 100%;
+    min-height: 50px;
+    background-color: lightslategray;
+}
+.cheader
+{
+   float: left;
+}
+.header h1
+{
+    color: white;
+    padding: 5px;
+    
+}
+.menudiv a
+{
+    float: left;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+.a
+{
+    float:right;
+}
+.fort
+{
+    background-image:url(/image/montain.jpeg) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 350px;
+    align-items: center;
+    padding-left: 350px;
+    font-size: larger;
+    h3{
+        padding-left: 250px;
+    }
+    button{
+        color: aqua;
+        background-color: brown;
+        font-size: 25px;
+        margin: 50px;
+        size: 30px;
+        padding: 7px;
+        margin-left: 35%;
+
+    }
+   
+}
+.corn
+{
+   float: left;
+   text-decoration: none;
+   margin-left: 15px;
+   margin-right: 15px;
+   padding-top: 20px;
+   flex-direction: row;
+   display: flex;
+   padding-top: 2px ;
+   padding-bottom: 20px;
+  
+}
+.ad
+{
+   
+    align-items: center;
+    width: 50%;
+   padding: 150px;
+   
+    img{
+        width: 30%;
+      
+    }
+    p{
+        width: 200px;
+    }
+}
+.ad img{
+   padding-left: 50px;
+}
+.lord
+{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    img{
+        width: 70%;
+        padding-left: 10%;
+    }
+
+}
+.pan
+{
+  
+}
+.section{
+    width: 40%;
+    display: flex;
+    float: left;
+    padding: 20px;
+    margin-left: 50px;
+}
+.sub1{
+    width: 50%;
+}
+.sub2{
+    width: 50%;
+    
+}
+.f1{
+    width: 50%;
+}
+.f2{
+    width: 50%;
+   
+}
+

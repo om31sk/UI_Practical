@@ -1,0 +1,136 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 80%;
+    min-height: 600px;
+    margin-left: 150px;
+    border: 2px solid black;
+}
+.main-header-div
+{
+  width: 90%;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 60px;
+  border: 2px solid crimson;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.main-header-div .logo
+{
+    width: 30%;
+    height: 50px;
+    float: left;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.logo h1
+{
+   text-align: center;
+   padding: 5px;
+   color: antiquewhite;
+}
+.main-header-div .menu:nth-child(2)
+{
+  margin-left: 40px;
+  margin-right: 150px;
+}
+.main-header-div .menu
+{
+    width: 35%;
+    height: 50px;
+    float: left;
+    padding-top: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.menu a
+{
+    font-size: 20px;
+    padding: 20px;
+    color: aqua;
+    text-decoration: none;
+
+}
+.search
+{
+    width:80% ;
+    height:30px;
+}
+.search button
+{
+    border-radius: 15px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   -ms-border-radius: 15px;
+   -o-border-radius: 15px;
+}
+.corn
+{
+    width: 95%;
+    height: 450px;
+    margin-top: 30px;
+
+    border: 2px solid red;
+    display: flex;
+}
+.corn .div1
+{
+    width: 50%;
+    height:300px ;
+    margin-top: 30px;
+}
+.div1
+{
+  margin-top: 30px;
+  text-align: center; 
+  color: beige;
+}
+.div1 mark
+{
+    color: blue;
+}
+.corn .div2
+{
+    width: 50px;
+    height: 300px;
+    margin-left:120px ;
+    margin-top: 20px;
+}
+.div2 h1
+{
+  color: antiquewhite;
+  font-size: 40px;
+
+}
+.div2 input
+{
+    width:420%;
+    height: 30px;
+    margin: 5px;
+    display: flex;
+}
+.flex
+{
+    display: flex;
+    width: 200%;
+    border: 1px solid black ;
+}
+body
+{
+    background-image: url(/image/pexels.jpeg);
+}

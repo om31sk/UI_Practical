@@ -1,0 +1,352 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 100%;
+    min-height: 450px;
+    border: 2px solid black;
+    margin: auto;
+}
+.main-header
+{
+    width: 100%;
+    min-height: 500px;
+    background-image: url(/image/ice-cream-1379585_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    background-position: bottom right;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    object-fit: fill;  
+}
+.content
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    /*border: 2px solid saddlebrown;*/
+}
+.logo
+{
+    width: 50%;
+    height: 60px;
+    /*border: 2px solid red;*/
+}
+.logo h1
+{
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-style: italic;
+}
+.menu
+{
+    width: 50%;
+    height: 60px;
+   /* border: 2px solid red; */ 
+    padding: 15px; 
+}
+.menu a
+{
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: white;
+    font-style: italic;
+}
+.mess
+{
+    text-align: center;
+    padding-top: 120px;
+}
+.mess h4
+{
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+.mess h1
+{
+    font-size: 3.7em;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+.header
+{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    /*border: 2px solid darkgreen;*/
+}
+.head1
+{
+    width: 60%;
+    height: 450px;
+    text-align: center;
+    padding-top: 80px;
+    /*border: 2px solid blue;*/
+    background-image: url(/image/flower-212353_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+}
+.head1 h2
+{
+    font-size: 2.7em;
+    
+}
+.head1 h3
+{
+    font-size: 2.7em;
+    color: rgb(57, 57, 141);
+}
+.para
+{
+    width: 60%;
+    height: 250px;
+    margin-top: 30px;
+    margin-left: 160px;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.head2
+{
+    width: 40%;
+    height: 450px;
+    /*border: 2px solid blue;*/
+}
+.head2 img
+{
+    width: 100%;
+    height: 450px;
+}
+.naro
+{
+   width: 100%;
+   height: 310px;
+   text-align: center;
+   padding-top: 80px;
+   background-color: rgb(203, 196, 185);
+   /*border: 2px solid blue;*/
+}
+.naro h1
+{
+    font-size: 2.9em;
+    color: rgb(88, 60, 148);
+}
+.naro h5
+{
+    padding-top: 15px;
+    font-size: large;
+    font-style: oblique;
+    color: rgb(35, 36, 67);
+}
+.naro h6
+{
+    font-size: large;
+    font-style: oblique;
+    color: rgb(35, 36, 67);
+}
+.naro button
+{
+    width: 10%;
+    height: 35px;
+    margin-top: 25px;
+    background-color: rgb(48, 48, 100);
+    color: white;
+    font-size: 1em;
+}
+.navbar
+{
+   width: 100%;    
+   height: 450px;
+   display: flex;
+   /*border: 2px solid gold;*/
+}
+.nav
+{
+    width: 52%;
+    height: 450px;
+    /*border: 2px solid lawngreen;*/
+}
+.nav img
+{
+    width: 100%;
+    height: 450px;
+}
+.bar
+{
+    width: 48%;
+    height: 450px;
+    /*border: 2px solid lawngreen;*/
+}
+.bar img
+{
+    width: 100%;
+    height: 450px;
+}
+.box
+{
+    width: 100%;
+    height: 800px;
+    border: 2px solid lawngreen;
+}
+.box h1
+{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 3em;
+}
+.box h1 span a
+{
+    text-decoration: none;
+}
+.box h1 span a:hover
+{
+    background-color: chocolate;
+    color: aqua;
+}
+.row
+{
+    width: 60%;
+    height: 250px;
+    display: flex;
+    margin-top: 80px;
+    margin-left: 330px;
+    /*border: 2px solid gold;*/
+}
+.row1
+{
+    width: 60%;
+    height: 250px;
+    display: flex;
+    margin-left: 330px;
+    /*border: 2px solid gold;*/
+}
+.column
+{
+    width: 33.30%;
+    height: 250px;
+    /*border: 2px solid sienna;*/
+}
+.column img
+{
+    width: 100%;
+    height: 250px;
+}
+.sign
+{
+    width: 100%;
+    height: 250px;
+    padding-top: 60px;
+    background-color: rgb(55, 76, 209);
+    /*border: 2px solid sienna;*/
+}
+.sign h2
+{
+    text-align: center;
+}
+.rg 
+{
+    margin-top: 50px;
+    text-align: center;
+}
+.rg label
+{
+    padding-right: 740px;
+    font-size: larger;
+    font-style: oblique;
+    font-weight: bolder;
+
+}
+.rg input[type=text]
+{
+    width: 50%;
+    height: 40px;
+    font-style: oblique;
+    font-size: medium;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.rg input[type=button]
+{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(223, 163, 211);
+    margin-left: 10px;
+    font-weight: bold;
+    font-style: oblique;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.main
+{
+    width: 100%;
+    min-height: 100px;
+    /* text-align: center; */
+    background-color: #F5D3EE;
+    padding-bottom: 5rem;
+    align-items: center;
+}
+.main .img 
+{
+    text-align: center;
+    padding-top:80px ;
+    /* border: 1px solid #000; */
+}
+.flexdiv
+{
+    width: 100%;
+    min-height: 100px;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flexdiv .flex
+{
+    width: 100%;
+    min-height: 250px;
+    flex-basis: 25%;
+    
+    /* border: 1px solid #000; */
+}
+.flex p
+{
+    font-size: larger;
+    font-weight: bolder;
+    font-style: oblique;
+    margin-left: 90px;
+}
+.footer
+{
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    padding:30px 0px;
+    background-color: #263D93;
+}

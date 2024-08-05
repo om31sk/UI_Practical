@@ -1,0 +1,95 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
+ 
+.maindiv
+{
+    width: 80%;
+    min-height: 100px;
+    border: 3px solid #000;
+    margin: auto;
+}
+
+.header
+{
+    width: 100%;
+    min-height: 80px;
+    background-color: lightslategray;
+}
+.cheader
+{
+   float: left;
+}
+.clogo img
+{
+   float: right;
+   padding-right: 20px;
+   width: 50px;
+}
+
+.header h1
+{
+    color: white;
+    padding: 15px;
+    }
+    .menudiv{
+    height: 60px;
+    width: 100%;
+    background-color: lightcoral;
+    margin-top: 10px;
+    padding-top: 20px;
+    }
+    .menudiv a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 25px;
+    }
+    .maindiv a:hover{
+    background-color: red;
+    }
+    #imgdiv{
+    width: 100%;
+    background-color: aliceblue;
+    height: 300px;
+    margin-top: 10px;
+    }
+    #imgdiv img{
+    height: 100%;
+    width: 100%;
+    }
+    .content-div{
+    text-align: justify;
+    padding-top: 10px;
+    }
+    .content-div p{
+    background-color: aliceblue;
+    }
+    .content-div p{
+        background-color: aliceblue;
+        }
+        .content-div p::first-letter{
+        color: red;
+        font-size: xx-large;
+        }
+        .content-div p:hover{
+        color: pink;
+        }
+        .content-div p::selection{
+        background-color: yellowgreen;
+        color: white;
+        }
+        .footer{
+        width: 50%;
+        background-color: lightgray;
+        min-height: 50px;
+        padding-top: 10px;
+        color: white;
+        }
+        .footer-text{
+        float: left;
+        }
+        .footer-img{
+        float: right;
+        }
