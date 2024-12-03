@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+    <style>
+      input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            background: lightgray;
+            border-radius: 5px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #0d6efd;
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            background: #0d6efd;
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+          </style>
+</head>
+
+<body>
+
+  <!-- navbar-start -->
+  
+  <nav class="navbar navbar-expand-lg sticky-top">
+
+    
+    <div class="container-fluid bg-primary p-3 ">
+      <img src="../Images/HDFC-Bank.png " style="width: 30px; height: 30px; ">
+      <a class="navbar-brand text-white fw-bold " style="font-size: 30px;">HDFC BANK</a>
+
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav ">
+          <li class="nav-item ">
+            <a class="nav-link text-white " style="font-size: 20px;" href="#">Loan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white ms-3" style="font-size: 20px;" href="#">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white ms-3" style="font-size: 20px;" href="#">Products</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              style="font-size: 20px;">Accounts</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">1</a></li>
+              <li><a class="dropdown-item" href="#">2</a></li>
+              <li><a class="dropdown-item" href="#">3</a></li>
+              <li><a class="dropdown-item" href="#">4</a></li>
+              <li><a class="dropdown-item" href="#">5</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link text-white ms-3 " style="font-size: 20px;" href="#">Deposits</a>
+          </li>
+        </ul>
+
+        <form class="d-flex mx-5">
+          <input class="form-control " type="Search" placeholder="search" />
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar-end  -->
+  <div class="container mt-5">
+        <h2 class="text-center">Home Loan EMI Calculator</h2>
+
+        <!-- Loan Amount Section -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label for="loanAmount" class="form-label">Loan Amount</label>
+                <input type="range" class="form-range" id="loanAmount" min="100000" max="100000000" step="10000" value="21607134" oninput="calculateEMI()">
+                <div class="d-flex justify-content-between">
+                    <small>₹1 Lac</small>
+                    <small>₹10 Cr</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="loanAmountOutput" value="₹2,16,07,134" readonly>
+            </div>
+        </div>
+
+        <!-- Tenure Section -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label for="tenure" class="form-label">Tenure (Years)</label>
+                <input type="range" class="form-range" id="tenure" min="1" max="30" step="1" value="25" oninput="calculateEMI()">
+                <div class="d-flex justify-content-between">
+                    <small>1</small>
+                    <small>30</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="tenureOutput" value="25" readonly>
+            </div>
+        </div>
+
+        <!-- Interest Rate Section -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label for="interestRate" class="form-label">Interest Rate (% P.A.)</label>
+                <input type="range" class="form-range" id="interestRate" min="0.5" max="15" step="0.01" value="8.75" oninput="calculateEMI()">
+                <div class="d-flex justify-content-between">
+                    <small>0.5</small>
+                    <small>15</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="interestRateOutput" value="8.75%" readonly>
+            </div>
+        </div>
+
+        <!-- EMI Results Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Monthly Home Loan EMI</h4>
+                <h2 id="emiAmount">₹1,77,642</h2>
+                <p>View Details</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Principal Amount</h5>
+                <p id="principalAmount">₹2,16,07,134</p>
+                <h5>Interest Amount</h5>
+                <p id="interestAmount">₹3,16,85,369</p>
+                <h5>Total Amount Payable</h5>
+                <p id="totalAmount">₹5,32,92,503</p>
+            </div>
+        </div>
+
+        <button class="btn btn-primary mt-3">Talk to Our Loan Expert</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to format numbers as currency (INR)
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(value);
+        }
+
+        // EMI Calculation
+        function calculateEMI() {
+            let loanAmount = document.getElementById('loanAmount').value;
+            let tenure = document.getElementById('tenure').value;
+            let interestRate = document.getElementById('interestRate').value;
+
+            // Update the text inputs with selected range values
+            document.getElementById('loanAmountOutput').value = formatCurrency(loanAmount);
+            document.getElementById('tenureOutput').value = tenure;
+            document.getElementById('interestRateOutput').value = parseFloat(interestRate).toFixed(2) + '%';
+
+            // Calculate EMI
+            let monthlyInterestRate = (interestRate / 12) / 100;
+            let totalMonths = tenure * 12;
+            let emi = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalMonths)) / (Math.pow(1 + monthlyInterestRate, totalMonths) - 1);
+
+            // Update the EMI result
+            document.getElementById('emiAmount').innerHTML = formatCurrency(emi);
+
+            // Calculate interest and total payable amount
+            let totalAmountPayable = emi * totalMonths;
+            let interestAmount = totalAmountPayable - loanAmount;
+
+            // Update result fields
+            document.getElementById('principalAmount').innerHTML = formatCurrency(loanAmount);
+            document.getElementById('interestAmount').innerHTML = formatCurrency(interestAmount);
+            document.getElementById('totalAmount').innerHTML = formatCurrency(totalAmountPayable);
+        }
+
+        // Initial Calculation
+        calculateEMI();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+
+  <!-- <div class="container pt-4 ">
+    <h1 class="text-center">Home Loan EMI Calculator</h1>
+    <div class="row">
+      <div class="col-md-6 input-wrapper p-5" style="border: 1px solid #000;">
+        <div class="Wrapper pt-3">
+          <label for="LoanAmt">Loan Amount(₹)</label><br>
+          <input type="range" class="range-input " style=""  min="1000" max="2000000000" value="200000"/>
+        </div>
+
+        <div class="Wrapper pt-3">
+          <label for="LoanAmt">Tenure(Years)</label><br>
+          <input type="range" class="range-input "  min="1000" max="2000000000" value="200000"/>
+        </div>
+
+        <div class="Wrapper pt-3">
+          <label for="LoanAmt">Interest Rate(% P.A.)</label><br>
+          <input type="range" class="range-input "  min="1000" max="2000000000" value="200000"/>
+        </div>
+
+      </div>
+      <div class="col-md-6" style="border: 1px solid #000;">
+
+      </div>
+    </div>
+    
+  </div> -->
+
+</body>
+
+</html>

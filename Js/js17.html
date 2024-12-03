@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>String application</title>
+   <script type="text/JavaScript">
+        function validatename(name) 
+        {
+         let str=document.getElementById("name").value;
+          let b=false;
+          for(let i=0; i<str.length; i++)
+          {
+               if(!((str.charCodeAt(i)>=97&& str.charCodeAt(i)<=122) || (str.charCodeAt(i)>=65 && str.charCodeAt(i)<=90)  || (str.charCodeAt(i)==32)))
+                {  b=true;
+                   break;
+                }
+          }
+          if(b)
+          {
+              let span = document.getElementById("s");
+              span.innerHTML="invalid input";
+              span.style.color="red";
+          }
+          else{
+              let span=document.getElementById("s");
+              span.innerHTML="";
+              span.style.color="white";
+          }
+
+       } 
+        
+
+        function validateMobileNumber(num) 
+        {
+          let str2=document.getElementById("num").value;
+          let a=false;
+              if(str2.length==10 && str2.charCodeAt(0)!=48)
+              {
+                  for(let i=0;i<str2.length;i++)
+                  {
+                      if(!((str2.charCodeAt(i)>=48 && str2.charCodeAt(i)<=57)))
+                      {
+                          a=true;
+                          break;
+                      }
+                  }
+                      if(a)
+                      {
+                          let span1=document.getElementById("s1");
+                          span1.innerHTML="Inavalid contact number";
+                          span1.style.color="white";
+
+                      }
+                      else
+                      {
+                          let span1=document.getElementById("s1");
+                          span1.innerHTML="";
+                          span1.style.color="";
+                      }
+              }
+              else
+              {
+                  let span1=document.getElementById("s1");
+                  span1.innerHTML="Mobile number should be 10 digit or should not start with 0";
+                  span1.style.color="red";
+              }
+
+        }
+        
+        function checkUpper(email) 
+        {
+           let len=email;
+           let flag=false;
+           for(var i=0;i<len.length;i++)
+           {
+              if(len.charCodeAt(i)>=65 && len.charCodeAt(i)<=90)
+              {
+                flag=true;
+                break;
+              }
+           }  
+           return flag;
+        }
+
+        function validateEmail(email) 
+        {
+           let str=checkUpper(email);
+           if(str==true)
+           {
+             document.getElementById("s2").innerHTML="Capital element are not allowed";
+             document.getElementById("s2").style.color="red";
+           }
+           else
+           {
+             let index=email.indexOf("@");
+             if(index<=0)
+             {
+                document.getElementById("s2").innerHTML="invalid email address";
+                document.getElementById("s2").style.color="red";
+             }
+             else
+             {
+                let substr=email.substring(index,str.length);
+                let ind=substr.indexOf(".");
+                let count=0;
+                for(let i=0;i<str.length;i++)
+                {
+                    if(str.charAt(i)=='@')
+                     {
+                        ++count;
+                     }
+                }
+
+                if(((substr.substring(ind,substr.length).length==4) || substr.substring(ind,substr.length).length==3) && count==1)
+                {
+                    document.getElementById("s2").innerHtml="";
+                }
+                else
+                {
+                    document.getElementById("s2").style.color="red";
+                }
+           }
+        }
+    </script>
+    <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      .container
+      {
+         width: 40%;
+         height: 400px;
+         margin: auto;
+         border: 2px solid black;
+         margin-top: 90px;
+         background-image: url(/image/lilacs-4250869_1920.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         text-align: center;
+         padding-top: 60px;
+      }
+      label
+      {
+        font-style: oblique;
+        font-size: larger;
+      }
+    </style>
+    
+</head>
+
+<body>
+
+   <div class="container">
+    
+   <label for="name">Full Name</label>
+   <input type="text" name="name" value="" style="width: 200px; height: 20px;"onkeyup="validatename(this.value)">&nbsp;&nbsp;
+   <span id="s"></span> <br><br>
+   <label for="num">Mobile Number</label>
+   <input type="text" id="num" style="width: 200px; height: 20px;" onkeyup="validateMobileNumber(this.value)">
+   <span id="s1"></span> <br><br>
+   <label for="email">E-mail</label>
+   <input type="text" name="email" id="email" style="width: 200px; height: 20px;" onkeyup="validateEmail(this.value)">
+   <span id="s2"></span> <br><br>
+   <input type="button" value="click here" style="width:200px;height: 30px; border-radius: 10px; margin-left: 30px;">
+
+   </div>
+   
+</body>
+
+</html>

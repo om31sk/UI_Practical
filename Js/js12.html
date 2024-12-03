@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container
+        {
+            width: 30%;
+            height: 630px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        .head
+        {
+            text-align: center;
+            margin-top: 50px;
+            font-style: oblique;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        .nav
+        {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .nav input[type=text]
+        {
+            width: 73%;
+            height: 40px;
+            outline: none;
+            border-radius: 10px;
+        }
+        .row
+        {
+            text-align: center;
+            padding:15px ;
+        }
+        .row input[type=button]
+        {
+            width: 14%;
+            height: 35px;
+            margin: 15px;
+            font-style: oblique;
+            font-weight: bold;
+            font-size: large;
+            outline: none;
+            background-color: rgb(239, 192, 134);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="head">
+            <h1>Calculater</h1>
+        </div>
+
+        <div class="nav">
+            <input type="text" id="result" readonly >
+        </div>
+
+        <div class="row">
+            <input type="button" value="AC" class="clear All" onclick="ClearResult('AC')">
+            <input type="button" value="%" class="operator" onclick="appendToResult('%')">
+            <input type="button" value="DE" class="clear" onclick="ClearResult('DE')">
+            <input type="button" value="/" class="operator" onclick="appendToResult('/')">
+        </div>
+
+        <div class="row">
+            <input type="button" value="7" onclick="appendToResult('7')">
+            <input type="button" value="8" onclick="appendToResult('8')">
+            <input type="button" value="9" onclick="appendToResult('9')">
+            <input type="button" value="*" class="operator" onclick="appendToResult('*')">
+        </div>
+
+        <div class="row">
+            <input type="button" value="4" onclick="appendToResult('4')">
+            <input type="button" value="5" onclick="appendToResult('5')">
+            <input type="button" value="6" onclick="appendToResult('6')">
+            <input type="button" value="-" class="operator" onclick="appendToResult('-')">
+        </div>
+
+        <div class="row">
+            <input type="button" value="1" onclick="appendToResult('1')">
+            <input type="button" value="2" onclick="appendToResult('2')">
+            <input type="button" value="3" onclick="appendToResult('3')">
+            <input type="button" value="+" class="operator" onclick="appendToResult('+')">   
+        </div>
+
+        <div class="row">
+           <input type="button" value="00" onclick="appendToResult('00')">
+           <input type="button" value="0" onclick="appendToResult('0')">
+           <input type="button" value="." class="operator" onclick="appendToResult('.')">
+           <input type="button" value="=" class="equals" onclick="calculate()">
+
+        </div>
+
+    </div>
+
+    <script>
+        function appendToResult(value)
+        {
+            document.getElementById("result").value+=value;
+        }
+        
+        function ClearResult(type)
+        {
+            
+            const resultField = document.getElementById("result");
+            if (type == 'AC') 
+            {
+              resultField.value = "";
+            } 
+            else if (type == 'DE') 
+            {
+              resultField.value = resultField.value.slice(0, -1);
+            }
+        }
+
+        function calculate()
+        {
+            try
+            {
+                document.getElementById("result").value=eval(document.getElementById("result").value);
+            }
+            catch(error)
+            {
+               document.getElementById("result").value="Error";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
